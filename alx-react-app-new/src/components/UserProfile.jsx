@@ -1,9 +1,11 @@
  function UserProfile (props){
     return(
-        <div>
-            <h2>{props.name}</h2>
-            <p>Age: {props.age}</p>
-            <p>Bio: {props.bio}</p>
+        <div style={{ border: '1px solid deeppink', 
+        padding: '20px', 
+        margin: '10px' }}>
+            <h2 style={{fontWeight: 'bold'}}>{props.name}</h2>
+            <p style={{fontSize: '20px'}}>Age: {props.age}</p>
+            <p style={{fontSize: '20px'}}>Bio: {props.bio}</p>
         </div>
     );
  };
