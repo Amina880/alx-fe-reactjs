@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Navbar from "./Navbar";
+
 
    function Contact() {
      const [formData, setFormData] = useState({
@@ -19,7 +19,6 @@ import Navbar from "./Navbar";
 
      return (
         <>
-        <Navbar />
        <div style={{  border: '4px solid green', padding: '20px' }}>
          <h1>Contact Us</h1>
          <form onSubmit={handleSubmit}>

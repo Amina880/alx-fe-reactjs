@@ -2,14 +2,26 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter,createRoutesFromElements ,Route,RouterProvider } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Services from './components/Services'
 import Navbar from './components/Navbar'
+import Layout from './Layout'
 
-export const router = createBrowserRouter([
+export const router2 = createBrowserRouter(createRoutesFromElements(
+  <Route path='/' element= {<Layout />}>
+    <Route path="" element= {<Home />}></Route>
+    <Route path="about" element= {<About />}></Route>
+    <Route path="services" element= {<Services />}></Route>
+    <Route path="contact" element= {<Contact />}></Route>
+
+  </Route>
+))
+
+
+/*export const router = createBrowserRouter([
   {
     path: "/",
     Component: Home,
@@ -26,7 +38,7 @@ export const router = createBrowserRouter([
     path: "/contact",
     Component: Contact,
   }
-])
+])*/
 
 function App() {
   const [count, setCount] = useState(0)
