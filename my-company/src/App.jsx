@@ -2,12 +2,38 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About'
+import Contact from './components/Contact'
+import Services from './components/Services'
+import Navbar from './components/Navbar'
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: Home,
+  },
+  {
+    path: "/about",
+    Component: About,
+  },
+  {
+    path: "/services",
+    Component: Services,
+  },
+  {
+    path: "/contact",
+    Component: Contact,
+  }
+])
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Navbar/>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
