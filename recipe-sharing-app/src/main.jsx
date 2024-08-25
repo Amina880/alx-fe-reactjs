@@ -3,14 +3,14 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import {createBrowserRouter,RouterProvider}  from "react-router-dom";
 import './index.css'
-import { RecipeDetails } from './components/RecipeDetails.jsx';
+import { RecipeDetail } from './components/RecipeDetail.jsx';
 import RecipeList from './components/RecipeList.jsx';
 import AddRecipeForm from './components/AddRecipeForm.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: RecipeDetails,
+    Component: RecipeDetail,
   },
   {
     path: "/recipelist",
