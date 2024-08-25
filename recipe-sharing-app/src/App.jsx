@@ -6,6 +6,8 @@ import RecipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeDetail from './components/RecipeDetails'
 import { createBrowserRouter,createRoutesFromElements ,Route, RouterProvider } from 'react-router-dom'
+import FavoritesList from './components/FavoritesList'
+import RecommendationsList from './components/RecommendationsList'
 
 
 export const router = createBrowserRouter(createRoutesFromElements(
@@ -20,6 +22,8 @@ function App() {
     <>
       <RecipeList />
       <AddRecipeForm />
+      <FavoritesList />
+      <RecommendationsList/>
     </>
   )
 }
