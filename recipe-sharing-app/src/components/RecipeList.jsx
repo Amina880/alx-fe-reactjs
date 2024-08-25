@@ -1,5 +1,6 @@
 import { useRecipeStore } from "./recipeStore";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
   const RecipeList = () => {
     const filteredRecipes = useRecipeStore((state) => state.filteredRecipes);
@@ -14,6 +15,10 @@ import { useEffect } from "react";
 
     return (
       <div>
+        <nav>
+            <Link to="/">Recipe Details </Link>
+            <Link to="/recipelist">Recipe List </Link>
+        </nav>
          {Array.isArray(filteredRecipes) && filteredRecipes.length > 0 ? (
         filteredRecipes.map((recipe) => {
           if (!recipe) return null; // Check if the recipe is defined
