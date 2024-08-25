@@ -30,8 +30,8 @@ const EditRecipeForm = ({ recipeId, onClose }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     if (!formData.title.trim() || !formData.ingredients.trim() || !formData.instructions.trim()) {
       alert('All fields are required.');
