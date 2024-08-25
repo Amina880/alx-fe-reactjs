@@ -3,7 +3,7 @@ import EditRecipeForm from "./EditRecipeForm";
 import { useRecipeStore } from "./recipeStore";
 import AddRecipeForm from "./AddRecipeForm";
 
-export const RecipeDetail = ({ recipeId }) => {
+ const RecipeDetail = ({ recipeId }) => {
     const recipe = useRecipeStore(state =>
       state.recipes.find(recipe => recipe.id === recipeId)
     );
@@ -19,3 +19,4 @@ export const RecipeDetail = ({ recipeId }) => {
       </div>
     );
   };
+  export default RecipeDetail
