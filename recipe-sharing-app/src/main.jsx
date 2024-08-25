@@ -6,17 +6,8 @@ import './index.css'
 import  RecipeDetail  from './components/RecipeDetails.jsx';
 import RecipeList from './components/RecipeList.jsx';
 import AddRecipeForm from './components/AddRecipeForm.jsx';
+import { router } from './App.jsx';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: RecipeDetail,
-  },
-  {
-    path: "/recipelist",
-    Component: RecipeList,
-  }
-]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
