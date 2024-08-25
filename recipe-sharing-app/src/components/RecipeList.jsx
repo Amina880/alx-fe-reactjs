@@ -2,7 +2,7 @@ import { useRecipeStore } from "./recipeStore";
 import { useEffect } from "react";
 
   const RecipeList = () => {
-    const recipes = useRecipeStore(state => state.recipes);
+    const filteredRecipes = useRecipeStore((state) => state.filteredRecipes);
     /*const fetchRecipes = useRecipeStore((state) => state.fetchRecipes);
 
   // Fetch recipes when the component mounts
@@ -14,8 +14,8 @@ import { useEffect } from "react";
 
     return (
       <div>
-         {Array.isArray(recipes) && recipes.length > 0 ? (
-        recipes.map((recipe) => {
+         {Array.isArray(filteredRecipes) && filteredRecipes.length > 0 ? (
+        filteredRecipes.map((recipe) => {
           if (!recipe) return null; // Check if the recipe is defined
           return (
             <div key={recipe.id}>
