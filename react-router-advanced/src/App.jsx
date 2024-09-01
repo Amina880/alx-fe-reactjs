@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Router,Route ,Routes,createBrowserRouter } from 'react-router-dom'
-import { ProfileDetails, ProfileSettings } from './components/Profile'
+import Profile, { ProfileDetails, ProfileSettings } from './components/Profile'
 
 export const router = createBrowserRouter(createRoutesFromElements(
   <Routes>
@@ -11,8 +11,11 @@ export const router = createBrowserRouter(createRoutesFromElements(
     <Route path="profile details" element= {<ProfileDetails />}></Route>
     <Route path="profile settings" element= {<ProfileSettings />}></Route>
     <Route path="/blog/:id" element={<BlogPost />} />
+    <ProtectedRoute path="/profile" element={<Profile />} />
   </Routes>
 ))
+
+
 
 function App() {
   const [count, setCount] = useState(0)

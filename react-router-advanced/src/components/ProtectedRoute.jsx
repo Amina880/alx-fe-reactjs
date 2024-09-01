@@ -18,7 +18,6 @@ const PrivateRoute = ({ children }) => {
     return isAuthenticated ? children : <Navigate to="/login" />;
 };
 
-
 const ProtectedRoute = () => (
     
         <div>
