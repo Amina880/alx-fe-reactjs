@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { redirect } from 'react-router-dom';
-import App from '../App';
 import { useState, useEffect } from 'react';
+import Profile from './Profile';
 
 const useAuth = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -20,7 +19,7 @@ const PrivateRoute = ({ children }) => {
 };
 
 
-const ProtectedRoutes = () => (
+const ProtectedRoute = () => (
     <Router>
         <div>
             <Routes>
@@ -28,10 +27,10 @@ const ProtectedRoutes = () => (
                 <Route path="/login" element={<Login />} />
                 {/* Protected route to Dashboard component */}
                 <Route
-                    path="/"
+                    path="/profile"
                     element={
                         <PrivateRoute>
-                            <App />
+                            <Profile/>
                         </PrivateRoute>
                     }
                 />
@@ -52,4 +51,4 @@ const Login = () => {
     return <button onClick={handleLogin}>Login</button>;
 };
 
-export default ProtectedRoutes
+export default ProtectedRoute
