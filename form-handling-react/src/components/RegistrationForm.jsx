@@ -22,19 +22,19 @@ const handleSubmit = (e) => {
         <input 
         type='text'
         name='name'
-        value = {formData.username}
+        value = {username}
         onChange={handleChange}
         />
         <input 
         type='email'
         name='email'
-        value = {formData.email}
+        value = {email}
         onChange={handleChange}
         />
         <input 
         type='password'
         name='password'
-        value = {formData.password}
+        value = {password}
         onChange={handleChange}
         />
         <button type= "submit">Submit</button>
