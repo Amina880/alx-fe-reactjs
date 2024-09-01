@@ -10,10 +10,6 @@ const [username, setUserName] = useState('')
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 
-const handleChange = (e) => {
-    const {name, value} = e.target;
-   
-}
 
 const handleSubmit = (e) => {
     e.preventDefault()
@@ -27,7 +23,7 @@ const handleSubmit = (e) => {
         type='text'
         name='username'
         value = {username}
-        onChange={(e) => setUsername(e.target.value)}
+        onChange={(e) => setUserName(e.target.value)}
         />
         <input 
         type='email'
@@ -36,7 +32,7 @@ const handleSubmit = (e) => {
         onChange= {(e) => setEmail(e.target.value)}
         />
         <input 
-        type='text'
+        type='password'
         name='password'
         value = {password}
         onChange={(e) => setPassword(e.target.value)}
