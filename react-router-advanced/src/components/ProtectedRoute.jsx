@@ -20,12 +20,9 @@ const PrivateRoute = ({ children }) => {
 
 
 const ProtectedRoute = () => (
-    <Router>
+    
         <div>
             <Routes>
-                {/* Public route to Login component */}
-                <Route path="/login" element={<Login />} />
-                {/* Protected route to Dashboard component */}
                 <Route
                     path="/profile"
                     element={
@@ -36,7 +33,7 @@ const ProtectedRoute = () => (
                 />
             </Routes>
         </div>
-    </Router>
+   
 );
 
 
