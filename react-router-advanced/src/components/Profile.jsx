@@ -13,9 +13,7 @@ const Profile = () => {
                 <li>
                     <Link to={"settings"}>Settings</Link>
                 </li>
-                 <li>
-                    <Link to={"/profile"}>Dashboard</Link>
-                </li>
+                
             </ul>
 
 
