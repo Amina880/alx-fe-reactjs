@@ -12,8 +12,18 @@ const [password, setPassword] = useState('')
 
 const handleChange = (e) => {
     const {name, value} = e.target;
-    setFormData (prevState => ({...prevState, [name]: value}))
+   
 }
+
+if (name === 'username') {
+      setUserName(value);
+    } else if (name === 'email') {
+      setEmail(value);
+    } else if (name === 'password') {
+      setPassword(value);
+    }
+  };
+
 
 const handleSubmit = (e) => {
     e.preventDefault()
