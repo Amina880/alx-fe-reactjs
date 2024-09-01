@@ -3,8 +3,6 @@ import { useListStore } from "../useListStore";
 const TodoList = () => {
 const { todos, deleteTask, toggleTask } = useListStore();
  
-  
-
   return (
     <div>
       <h2 >Todo List</h2>
