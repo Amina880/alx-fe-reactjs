@@ -37,7 +37,6 @@ export default Profile
 
 
 
-// Settings component
-const Settings = () => <h3>Settings</h3>;
-ProfileDetails = () => <h3>Profile Details</h3>
-ProfileSettings = () => <h3>Profile Settings</h3>
+
+export const ProfileDetails = () => <h3>Profile Details</h3>
+export const ProfileSettings = () => <h3>Profile Settings</h3>

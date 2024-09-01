@@ -2,32 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Router, createBrowserRouter } from 'react-router-dom'
+import { Router,Route ,Routes,createBrowserRouter } from 'react-router-dom'
+import { ProfileDetails, ProfileSettings } from './components/Profile'
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: HomePage,
-  },
-  {
-    path: "/app",
-    Component: App,
-  },
-  {
-    path: "/count",
-    Component: Counter,
-  },
-  {
-    path:'/profile/*',
-    Component: Dashboard,
-  },
-  {
-    path:"/userpage/*",
-    Component:DynamicUserpage,
-  }
-   
-
-])
+export const router = createBrowserRouter(createRoutesFromElements(
+  <Routes>
+  <Routes path='/' element= {<Profile/>}></Routes>
+    <Route path="profile details" element= {<ProfileDetails />}></Route>
+    <Route path="profile settings" element= {<ProfileSettings />}></Route>
+    <Route path="/blog/:id" element={<BlogPost />} />
+  </Routes>
+))
 
 function App() {
   const [count, setCount] = useState(0)
