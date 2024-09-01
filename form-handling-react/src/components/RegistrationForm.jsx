@@ -15,16 +15,6 @@ const handleChange = (e) => {
    
 }
 
-if (name === 'username') {
-      setUserName(value);
-    } else if (name === 'email') {
-      setEmail(value);
-    } else if (name === 'password') {
-      setPassword(value);
-    }
-  };
-
-
 const handleSubmit = (e) => {
     e.preventDefault()
     console.log(username)
@@ -37,19 +27,19 @@ const handleSubmit = (e) => {
         type='text'
         name='username'
         value = {username}
-        onChange={handleChange}
+        onChange={(e) => setUsername(e.target.value)}
         />
         <input 
         type='email'
         name='email'
         value = {email}
-        onChange={handleChange}
+        onChange= {(e) => setEmail(e.target.value)}
         />
         <input 
         type='text'
         name='password'
         value = {password}
-        onChange={handleChange}
+        onChange={(e) => setPassword(e.target.value)}
         />
         <button type= "submit">Submit</button>
       
