@@ -22,19 +22,19 @@ const handleSubmit = (e) => {
         <input 
         type='text'
         name='username'
-        value = {username}
+        value={username}
         onChange={(e) => setUserName(e.target.value)}
         />
         <input 
         type='email'
         name='email'
-        value = {email}
+        value={email}
         onChange= {(e) => setEmail(e.target.value)}
         />
         <input 
         type='password'
         name='password'
-        value = {password}
+        value={password}
         onChange={(e) => setPassword(e.target.value)}
         />
         <button type= "submit">Submit</button>
