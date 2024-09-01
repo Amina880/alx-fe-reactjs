@@ -32,7 +32,7 @@ const handleSubmit = (e) => {
         onChange={handleChange}
         />
         <input 
-        type='password'
+        type='text'
         name='password'
         value = {password}
         onChange={handleChange}
