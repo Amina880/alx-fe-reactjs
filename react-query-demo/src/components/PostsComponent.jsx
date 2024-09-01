@@ -6,12 +6,15 @@ const fetchPosts = async () => {
     return res.json();
 };
 
-const ReactQueryExample = () => {
+const PostsComponent = () => {
     // Use the useQuery hook to handle data fetching and caching
-    const { data, isError, isLoading } = useQuery({
+    const { data, isError, isLoading, refetch } = useQuery({
         queryFn: fetchPosts,
-        queryKey: 'John'
-   
+        queryKey: 'posts',
+        staleTime: 5000, 
+        cacheTime: 1000 * 60 * 10,
+        refetchOnWindowFocus:false,
+        keepPreviousData:true,
       });
 
     // Handle loading state
@@ -22,6 +25,7 @@ const ReactQueryExample = () => {
     // Render the fetched data
     return (
         <div>
+            <button onClick={() => refetch()}>Refetch Data</button>
             {data.map(item => (
                 <div key={item.id}>{item.title}</div>
             ))}
@@ -29,4 +33,4 @@ const ReactQueryExample = () => {
     );
 };
 
-export default ReactQueryExample;
+export default PostsComponent;
