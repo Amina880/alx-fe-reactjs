@@ -1,15 +1,15 @@
 import {useQuery} from 'react-query'
 
 // Define a fetch function that can be used to fetch data from an API
-const fetchData = async () => {
+const fetchPosts = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
     return res.json();
 };
 
 const ReactQueryExample = () => {
     // Use the useQuery hook to handle data fetching and caching
-    const { data, error, isLoading } = useQuery({
-        queryFn: fetchData,
+    const { data, isError, isLoading } = useQuery({
+        queryFn: fetchPosts,
         queryKey: 'John'
    
       });
@@ -17,7 +17,7 @@ const ReactQueryExample = () => {
     // Handle loading state
     if (isLoading) return <div>Loading...</div>;
     // Handle error state
-    if (error) return <div>Error loading data</div>;
+    if (isError) return <div>Error loading data</div>;
 
     // Render the fetched data
     return (
