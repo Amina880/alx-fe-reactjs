@@ -3,36 +3,52 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "/images/spaghetti.jpg"
+    "image": "/images/spaghetti.jpg",
+    "ingredients": "Pancetta, Pecorino cheese, Parmesan, Eggs, Spaghetti, Garlic, Unsalted butter, Sea salt and Freshly ground black pepper",
+    "method":"Put a large saucepan of water on to boil. Finely chop the 100g pancetta, having first removed any rind. Finely grate 50g pecorino cheese and 50g parmesan and mix them together. Beat the 3 large eggs in a medium bowl and season with a little freshly grated black pepper. Set everything aside."
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "/images/chickentik.jpeg"
+    "image": "/images/chickentik.jpeg",
+    "ingredients":"Boneless chicken thighs, Plain yogurt, Garlic, Ginger, Garam masala, Turmeric, Ground cumin, Kashmiri chili, Salt",
+    "method":"In a bowl, combine chicken with all of the ingredients for the chicken marinade; let marinate for 10 minutes to an hour (or overnight if time allows).Heat oil in a large skillet or pot over medium-high heat. When sizzling, add chicken pieces in batches of two or three, making sure not to crowd the pan. Fry until browned for only 3 minutes on each side. Set aside and keep warm. (You will finish cooking the chicken in the sauce.) Melt the butter in the same pan. Fry the onions until soft (about 3 minutes) while scraping up any browned bits stuck on the bottom of the pan."
   },
   {
-    "id": 1,
+    "id": 3,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "/images/spaghetti.jpg"
+    "image": "/images/spaghetti.jpg",
+    "ingredients": "Pancetta, Pecorino cheese, Parmesan, Eggs, Spaghetti, Garlic, Unsalted butter, Sea salt and Freshly ground black pepper",
+    "method":"Put a large saucepan of water on to boil. Finely chop the 100g pancetta, having first removed any rind. Finely grate 50g pecorino cheese and 50g parmesan and mix them together. Beat the 3 large eggs in a medium bowl and season with a little freshly grated black pepper. Set everything aside."
+
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "/images/chickentik.jpeg"
+    "image": "/images/chickentik.jpeg",
+    "ingredients":"Boneless chicken thighs, Plain yogurt, Garlic, Ginger, Garam masala, Turmeric, Ground cumin, Kashmiri chili, Salt",
+    "method":"In a bowl, combine chicken with all of the ingredients for the chicken marinade; let marinate for 10 minutes to an hour (or overnight if time allows).Heat oil in a large skillet or pot over medium-high heat. When sizzling, add chicken pieces in batches of two or three, making sure not to crowd the pan. Fry until browned for only 3 minutes on each side. Set aside and keep warm. (You will finish cooking the chicken in the sauce.) Melt the butter in the same pan. Fry the onions until soft (about 3 minutes) while scraping up any browned bits stuck on the bottom of the pan."
+
   },
   {
-    "id": 1,
+    "id": 5,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "/images/spaghetti.jpg"
+    "image": "/images/spaghetti.jpg",
+    "ingredients": "Pancetta, Pecorino cheese, Parmesan, Eggs, Spaghetti, Garlic, Unsalted butter, Sea salt and Freshly ground black pepper",
+    "method":"Put a large saucepan of water on to boil. Finely chop the 100g pancetta, having first removed any rind. Finely grate 50g pecorino cheese and 50g parmesan and mix them together. Beat the 3 large eggs in a medium bowl and season with a little freshly grated black pepper. Set everything aside."
+
   },
   {
-    "id": 2,
+    "id": 6,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "/images/chickentik.jpeg"
+    "image": "/images/chickentik.jpeg",
+    "ingredients":"Boneless chicken thighs, Plain yogurt, Garlic, Ginger, Garam masala, Turmeric, Ground cumin, Kashmiri chili, Salt",
+    "method":"In a bowl, combine chicken with all of the ingredients for the chicken marinade; let marinate for 10 minutes to an hour (or overnight if time allows).Heat oil in a large skillet or pot over medium-high heat. When sizzling, add chicken pieces in batches of two or three, making sure not to crowd the pan. Fry until browned for only 3 minutes on each side. Set aside and keep warm. (You will finish cooking the chicken in the sauce.) Melt the butter in the same pan. Fry the onions until soft (about 3 minutes) while scraping up any browned bits stuck on the bottom of the pan."
+
   }
 ]
