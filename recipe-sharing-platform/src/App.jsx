@@ -1,11 +1,13 @@
-
+import HomePage from "./components/HomePage"
 
 function App() {
   
 
   return (
     <>
-    <p className='text-3xl text-blue-600'>Hey</p>
+  
+    <HomePage />
+    
     </>
   )
 }
