@@ -32,7 +32,7 @@ if (!food) {
      <h2 className='md:text-xl mx-auto w-fit text-lg p-4 pb-8 italic text-gray-700'>Ingredients</h2>
      <p className='md:text-lg text-base mx-auto w-fit text-center px-4'>{food.ingredients}</p>
      <h2 className='md:text-xl mx-auto w-fit text-lg p-4 pb-8 pt-6 italic text-gray-700'>Cooking Instructions</h2>
-     <p className='md:text-lg text-base mx-auto w-fit text-center px-4 pb-8'>{food.method}</p>
+     <p className='md:text-lg text-base mx-auto w-fit text-center px-4 pb-8'>{food.instructions}</p>
     </div>
     </>
   )
