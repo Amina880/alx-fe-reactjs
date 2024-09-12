@@ -12,7 +12,7 @@ const [formData, setFormData] = useState({title: '', ingredients: '', instructio
 const resetForm = () => setFormData({title: '', ingredients: '', instructions:''});
 
 const handleChange = (e) => {
-    const {name, value} = e.target;
+    const {name, value} = e.target.value;
     setFormData (prevState => ({...prevState, [name]: value}))
 }
 
