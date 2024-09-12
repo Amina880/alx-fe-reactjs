@@ -9,7 +9,7 @@ import Nav from './Nav';
 function Form() {
 
 const [formData, setFormData] = useState({title: '', ingredients: '', instructions:''})
-const [errors, setErrors]= useState([validate])
+const [errors, setErrors]= useState({})
 const resetForm = () => setFormData({title: '', ingredients: '', instructions:''});
 
 const handleChange = (e) => {
@@ -17,10 +17,34 @@ const handleChange = (e) => {
     setFormData (prevState => ({...prevState, [name]: value}))
 }
 
+ // Validation function
+  const validate = () => {
+    let errors = {};
+
+    if (formData.title.trim() === '') {
+      errors.title = 'Title is required';
+    }
+    if (formData.ingredients.trim() === '' || formData.ingredients.length < 10) {
+      errors.ingredients = 'Ingredients must be at least 10 characters';
+    }
+    if (formData.instructions.trim() === '' || formData.instructions.length < 10) {
+      errors.instructions = 'Instructions must be at least 10 characters';
+    }
+
+    return errors;
+  };
+
+
 const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formData)
-    resetForm()
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      console.log(formData);
+      resetForm();
+      setErrors({});
+    }
 };
   return (
     <>
@@ -34,8 +58,10 @@ const handleSubmit = (e) => {
         name='title'
         value = {formData.title}
         onChange={handleChange}
-        required
+        
         />
+        {errors.title && <p className="text-red-400">{errors.title}</p>}
+
         <br></br>
         <p className=' font-mono italic md:text-xl text-lg'>Ingredients:</p>
         <input 
@@ -44,9 +70,10 @@ const handleSubmit = (e) => {
         name='ingredients'
         value = {formData.ingredients}
         onChange={handleChange}
-        minLength={10}
-        required
+        
         />
+        {errors.ingredients && <p className="text-red-400">{errors.ingredients}</p>}
+
         <br></br>
         <p className=' font-mono italic md:text-xl text-lg'>Instructions:</p>
         <input 
@@ -55,9 +82,9 @@ const handleSubmit = (e) => {
         name='instructions'
         value = {formData.instructions}
         onChange={handleChange}
-        minLength={10}
-        required
         />
+        {errors.instructions && <p className="text-red-400">{errors.instructions}</p>}
+
         <br></br>
         <button className='bg-blue-300 mx-auto w-full p-2 hover:shadow-lg font-semibold md:text-xl text-lg' type= "submit">Submit</button>
       
