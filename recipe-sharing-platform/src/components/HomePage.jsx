@@ -16,7 +16,7 @@ useEffect(() => {
     <h1 className="p-12 text-2xl md:text-3xl text-center">Recipe Sharing Platform</h1>
     <div>
 
-      <div className="mx-auto max-w-fit md:grid md:grid-cols-3 sm:grid sm:grid-cols-2 ">
+      <div className="mx-auto max-w-fit md:grid md:grid-cols-3 md:px-8 sm:grid sm:grid-cols-2 grid grid-cols-1 ">
         {responses.map((food) => (
           <div className="w-60 md:w-full odd:bg-gray-100 even:bg-white rounded-xl hover:shadow-2xl" key={food.id}>
             <br></br>
