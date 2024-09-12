@@ -22,7 +22,7 @@ useEffect(() => {
       <div className="mx-auto max-w-fit md:grid md:grid-cols-3 pt-6 md:px-8 sm:grid sm:grid-cols-2 grid grid-cols-1 ">
         {responses.map((food) => (
             <Link to={`/recipe/${food.id}`}>
-            <div className="w-60 md:w-full odd:bg-gray-100 even:bg-white rounded-xl hover:shadow-2xl" key={food.id}>
+            <div className="w-60 h-full md:w-full odd:bg-gray-100 even:bg-white rounded-xl hover:shadow-2xl" key={food.id}>
             <br></br>
             <p className=" text-lg md:text-2xl semibold text-center p-2 ">{food.title}</p>   
             <img className="w-64 h-70 p-6 md:mx-auto hover:scale-105" src={food.image} />
