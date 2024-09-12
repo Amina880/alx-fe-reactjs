@@ -17,11 +17,11 @@ useEffect(() => {
     setFood(fetchedRecipe);
 }, [foodId])
 
-if (!food) {
+if(!food) {
     return <div>Loading...</div>;
   }
 
-  return (
+ return (
     <>
     <br></br>
     <Nav />
