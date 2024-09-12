@@ -9,7 +9,7 @@ import Nav from './Nav';
 function Form() {
 
 const [formData, setFormData] = useState({title: '', ingredients: '', instructions:''})
-const [errors, setErrors]= useState([])
+const [errors, setErrors]= useState([validate])
 const resetForm = () => setFormData({title: '', ingredients: '', instructions:''});
 
 const handleChange = (e) => {
