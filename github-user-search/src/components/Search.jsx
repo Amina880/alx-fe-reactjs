@@ -47,10 +47,12 @@ const validate = () => {
 
 
   return (
-    <div>
-        <input type="text" placeholder='Enter Username' required onChange={handleChange} />
+    <>
+    <form>
+        <input type="text" placeholder='Enter Username to Login' required onChange={handleChange} />
         <button type="submit" onClick={handleSubmit}>Search</button>
         {errors.username && <p>{errors.username}</p>}
+         </form>
 
         {loading ? (<p> Loading...</p>)
         : errors.username ? (<p>Looks like we cant find the user</p>)
@@ -64,7 +66,7 @@ const validate = () => {
         </div>
       ):(<p>No user found</p>)
     }
-    </div>
+    </>
   )
 }
 
