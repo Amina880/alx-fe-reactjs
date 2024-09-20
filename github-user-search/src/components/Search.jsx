@@ -10,10 +10,10 @@ const [loading, setLoading]= useState(false)
 const [errors, setErrors]= useState({})
 const resetForm = () => setUsername('');
 
-const handleChange = (e) => {
+const login = (e) => {
     setUsername(e.target.value);
 }
-const handleSubmit = async (e) => {
+const onSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -49,8 +49,8 @@ const validate = () => {
   return (
     <>
     <form>
-        <input type="text" placeholder='Enter Username to Login' required onChange={handleChange} />
-        <button type="submit" onClick={handleSubmit}>Search</button>
+        <input type="text" placeholder='Enter Username' required onChange={login} />
+        <button type="submit" onClick={onSubmit}>Search</button>
         {errors.username && <p>{errors.username}</p>}
          </form>
 
