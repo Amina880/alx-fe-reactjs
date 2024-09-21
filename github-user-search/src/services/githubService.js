@@ -1,13 +1,22 @@
 import axios from "axios"
 
 
-const url = 'https://api.github.com/users/';
+const url = 'https://api.github.com/search/users?q=';
 
 
-const fetchUserData = async (username) => {
-    
+
+const fetchUserData = async ({ username, location, minRepos}) => {
+  
+    let query = `${username}`;
+    if (location){
+        query+= `+location:${location}`
+    }
+    if (minRepos){
+        query+= `+repos:>${minRepos}`
+    }
+
     try {
-        const response = await axios.get(`${url}${username}`);
+        const response = await axios.get(`${url}${query}`);
         return response.data;
     } 
     catch (error) {
