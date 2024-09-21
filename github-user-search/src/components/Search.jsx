@@ -36,7 +36,7 @@ const onSubmit = async (e) => {
     try {
       const data = await fetchUserData({username, location, minRepos});
       setUserData(data.items);
-      console.log(userData)
+     
     } 
     catch (error) {
         console.error('Looks like we cant find the user', error);
