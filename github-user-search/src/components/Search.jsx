@@ -82,7 +82,7 @@ const validate = () => {
         {userData.map(user => (
         <div key={user.id} className='bg-slate-100 px-8 rounded-lg shadow-md'>
           <h2 className='text-slate-600 md:text-2xl text-xl text-center font-semibold pt-6  '>{user.login}</h2>
-          <p className='text-slate-500 md:text-xl text-lg text-center '>{user.url}</p>
+          <p className='text-slate-500 md:text-xl text-lg text-center '>{user.html_url}</p>
           <p className='text-slate-500 md:text-xl text-lg text-center '>{user.location}</p>
           <p className='text-slate-500 md:text-xl text-lg text-center ' >{user.repos_url}</p>
           <img className='w-52 mx-auto rounded p-4 pt-10' src={user.avatar_url} alt="Avatar" />
